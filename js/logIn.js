@@ -49,7 +49,7 @@ async function authUser(userInfo) {
 }
 async function sendRequest(url, method, data) {
 	// e.preventDefault();
-	url = `http://localhost:5000/auth${url}`;
+	url = `https://bakerman-node-js-1fd874ff2f21.herokuapp.com/auth${url}`;
 
 	if (method == "POST") {
         console.log(data);
