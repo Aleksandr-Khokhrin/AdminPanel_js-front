@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of users</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" defer></script>
+    <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js" defer></script> -->
+    <script src="./js/logIn.js" defer></script>
+
+</head>
+<body>
+    <div class="autorizationBox" id="autBox">
+        <section id="login">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-wrap">
+                        <h1>Autorization</h1>
+                            <form role="form" action="javascript:;" method="post" class="login-form" autocomplete="off">
+                                <div class="form-group">
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input type="name" name="email" id="emailAut" class="form-control" placeholder="Fidel@Castro.ru">
+                                </div>
+                                <div class="form-group">
+                                    <label for="key" class="sr-only">Password</label>
+                                    <input type="password" name="key" id="keyAut" class="form-control key" placeholder="Password">
+                                </div>
+                                <div class="checkbox">
+                                    <span class="character-checkbox" onclick="showPassword()"></span>
+                                    <span class="label">Show password</span>
+                                </div>
+                                <input type="submit" id="autBtn" class="btn btn-custom btn-lg btn-block" value="Log in">
+                            </form>
+                            <span class="forget" id="getRegBox" data-toggle="modal" data-target=".forget-modal">Sign up</span>
+                            <hr>
+                        </div>
+                    </div> <!-- /.col-xs-12 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </section>    
+    </div>
+    <div class="registrationBox none" id="regBox">
+        <section id="login">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-wrap">
+                        <h1>Registration</h1>
+                            <form role="form" action="javascript:;" method="post" class="login-form" autocomplete="off">
+                                <div class="form-group">
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input type="email" name="email" id="emailReg" class="form-control" placeholder="your mailbox...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" class="sr-only">name</label>
+                                    <input type="email" name="email" id="nameReg" class="form-control" placeholder="your name...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="key" class="sr-only">Password</label>
+                                    <input type="password" name="key" id="keyRegOne" class="form-control key" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="key" class="sr-only">Password</label>
+                                    <input type="password" name="key" id="keyRegTwo" class="form-control key" placeholder="Password">
+                                </div>
+                                <div class="checkbox">
+                                    <span class="character-checkbox" onclick="showPassword()"></span>
+                                    <span class="label">Show password</span>
+                                </div>
+                                <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Sign up">
+                            </form>
+                            <span class="forget" id="getAutBox" data-toggle="modal" data-target=".forget-modal">Log in</span>
+                            <hr>
+                        </div>
+                    </div> <!-- /.col-xs-12 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </section> 
+    </div>
+    <div class="mainBox none" id="mainBox">
+        <section id="login">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-wrap">
+                        <h1>autorization complete</h1>
+                        <span id="userToken"></span>
+                        </div>
+                    </div> <!-- /.col-xs-12 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </section> 
+    </div>
+    </section>
+    
+    
+    
+</body>
+</html>
