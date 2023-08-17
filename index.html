@@ -7,122 +7,118 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" defer></script>
+    
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./scss/style.css">
+    
     <script src="./js/logIn.js" defer></script>
 
 </head>
 <body>
-    <div class="autorizationBox" id="autBox">
-        <section id="login">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="form-wrap">
-                        <h1>Autorization</h1>
-                            <form role="form" action="javascript:;" method="post" class="login-form" autocomplete="off">
-                                <div class="form-group">
-                                    <label for="email" class="sr-only">username</label>
-                                    <input type="name" name="name" id="nameAut" class="form-control" placeholder="Fidel">
+    <div class="bg-img">
+        <div class="underBG">
+            <div class="autorizationBox" id="autBox">
+                <section id="login">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-wrap">
+                                <h1>Autorization</h1>
+                                    <form role="form" action="javascript:;" method="post" class="login-form" autocomplete="off">
+                                        <div class="form-group">
+                                            <label for="name" class="sr-only">username</label>
+                                            <input type="name" name="name" id="nameAut" class="form-control" placeholder="Fidel">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="key" class="sr-only">Password</label>
+                                            <input type="password" name="key" id="keyAut" class="form-control key" placeholder="Password">
+                                        </div>
+                                        <div class="checkbox">
+                                            <input class="character-checkbox" type="checkbox" onclick="showPassword()"></input>
+                                            <span class="label">Show password</span>
+                                        </div>
+                                        <div class="d-flex justify-content-around align-items-center">
+                                            <input type="submit" id="autBtn" class="btn btn-success" value="Log in">
+                                            <input type="submit" id="getRegBox" class="btn btn-outline-success" value="Sign up">
+                                        </div>
+                                    </form>
+                                    <hr>
                                 </div>
-                                <div class="form-group">
-                                    <label for="key" class="sr-only">Password</label>
-                                    <input type="password" name="key" id="keyAut" class="form-control key" placeholder="Password">
+                            </div> <!-- /.col-xs-12 -->
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
+                </section>    
+            </div>
+            <div class="registrationBox none" id="regBox">
+                <section id="login">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-wrap">
+                                <h1>Registration</h1>
+                                    <form role="form" action="javascript:;" method="post" class="login-form" autocomplete="off">
+                                        <div class="form-group">
+                                            <label for="email" class="sr-only">Email</label>
+                                            <input type="email" name="email" id="emailReg" class="form-control" placeholder="your mailbox...">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username" class="sr-only">name</label>
+                                            <input type="name" name="name" id="nameReg" class="form-control" placeholder="your name...">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="key" class="sr-only">Password</label>
+                                            <input type="password" name="password" id="keyRegOne" class="form-control key" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="key" class="sr-only">Password</label>
+                                            <input type="password" name="key" id="keyRegTwo" class="form-control key" placeholder="Password">
+                                        </div>
+                                        <div class="checkbox">
+                                            <input class="character-checkbox" type="checkbox" onclick="showPassword()"></input>
+                                            <span class="label">Show password</span>
+                                        </div>
+                                        <div class="d-flex justify-content-around align-items-center">
+                                            <input type="submit" id="getAutBox" class="btn btn-outline-success" value="Log in">
+                                            <input type="submit" id="regBtn" class="btn btn-success" value="Sign up">
+                                        </div>
+                                    </form>
+                                    <hr>
                                 </div>
-                                <div class="checkbox">
-                                    <span class="character-checkbox" onclick="showPassword()"></span>
-                                    <span class="label">Show password</span>
-                                </div>
-                                <div class="d-flex justify-content-around align-items-center">
-                                    <input type="submit" id="autBtn" class="btn btn-success" value="Log in">
-                                    <input type="submit" id="getRegBox" class="btn btn-outline-success" value="Sign up">
-                                </div>
-                            </form>
-                            <hr>
-                        </div>
-                    </div> <!-- /.col-xs-12 -->
-                </div> <!-- /.row -->
-            </div> <!-- /.container -->
-        </section>    
-    </div>
-    <div class="registrationBox none" id="regBox">
-        <section id="login">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="form-wrap">
-                        <h1>Registration</h1>
-                            <form role="form" action="javascript:;" method="post" class="login-form" autocomplete="off">
-                                <div class="form-group">
-                                    <label for="email" class="sr-only">Email</label>
-                                    <input type="email" name="email" id="emailReg" class="form-control" placeholder="your mailbox...">
-                                </div>
-                                <div class="form-group">
-                                    <label for="username" class="sr-only">name</label>
-                                    <input type="name" name="name" id="nameReg" class="form-control" placeholder="your name...">
-                                </div>
-                                <div class="form-group">
-                                    <label for="key" class="sr-only">Password</label>
-                                    <input type="password" name="password" id="keyRegOne" class="form-control key" placeholder="Password">
-                                </div>
-                                <div class="form-group">
-                                    <label for="key" class="sr-only">Password</label>
-                                    <input type="password" name="key" id="keyRegTwo" class="form-control key" placeholder="Password">
-                                </div>
-                                <div class="checkbox">
-                                    <span class="character-checkbox" onclick="showPassword()"></span>
-                                    <span class="label">Show password</span>
-                                </div>
-                                <div class="d-flex justify-content-around align-items-center">
-                                    <input type="submit" id="getAutBox" class="btn btn-outline-success" value="Log in">
-                                    <input type="submit" id="regBtn" class="btn btn-success" value="Sign up">
-                                </div>
-                            </form>
-                            <hr>
-                        </div>
-                    </div> <!-- /.col-xs-12 -->
-                </div> <!-- /.row -->
-            </div> <!-- /.container -->
-        </section> 
-    </div>
-    <div class="mainBox none m-4" id="mainBox">
-        <div class="headBox d-flex justify-content-around align-items-center">
-            <div class="headLeft"><h1><strong id="userMainBoxName">Users table</strong></h1></div>
-            <div class="headRight btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-outline-success">Block</button>
-                <button type="button" class="btn btn-outline-warning">Unblock</button>
-                <button type="button" class="btn btn-outline-danger">Delete</button>
-              </div>
-        </div>
-        <div class="container text-center">
-            <div class="flexList">
-              <div class="col-list bg-info bg-opacity-10 border border-info d-flex align-items-center justify-content-center"></div>
-              <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 d-flex align-items-center justify-content-center">ID</div>
-              <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 d-flex align-items-center justify-content-center">Name</div>
-              <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 d-flex align-items-center justify-content-center">Mail</div>
-              <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 d-flex align-items-center justify-content-center">Reg. date</div>
-              <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 d-flex align-items-center justify-content-center">Last activity</div>
-              <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 d-flex align-items-center justify-content-center">State</div>
+                            </div> <!-- /.col-xs-12 -->
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
+                </section> 
+            </div>
+            <div class="mainBox none m-4" id="mainBox">
+                <div class="headBox d-flex justify-content-around align-items-center">
+                    <div class="headLeft"><h1><strong id="userMainBoxName">Users table</strong></h1></div>
+                    <div class="headRight btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-outline-success">Block</button>
+                        <button type="button" class="btn btn-outline-primary">Unblock</button>
+                        <button type="button" class="btn btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+                <div class="container text-center usersBoxes">
+                    <div class="flexList">
+                    <div class="col-list bg-info bg-opacity-10 border border-info d-flex align-items-center justify-content-center"></div>
+                    <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 d-flex align-items-center justify-content-center">ID</div>
+                    <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 d-flex align-items-center justify-content-center">Name</div>
+                    <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 d-flex align-items-center justify-content-center">Mail</div>
+                    <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 d-flex align-items-center justify-content-center">Reg. date</div>
+                    <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 d-flex align-items-center justify-content-center">Last activity</div>
+                    <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 d-flex align-items-center justify-content-center">State</div>
+                    </div>
+                </div>
+                <div class="mainBoxBody container text-center" id="mainBoxBody">
+                </div>
             </div>
         </div>
-        <div class="mainBoxBody container text-center" id="mainBoxBody">
-            <!-- <div class="flexList">
-              <div class="col-list bg-info bg-opacity-10 border border-top-0 border-info d-flex align-items-center justify-content-center"><input type="checkbox"></div>
-              <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 border-top-0" style="overflow-wrap: break-word;">1</div>
-              <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 border-top-0 d-flex align-items-center justify-content-center" style="overflow-wrap: break-word;">2</div>
-              <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 border-top-0 d-flex align-items-center justify-content-center" style="overflow-wrap: break-word;">3</div>
-              <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 border-top-0 d-flex align-items-center justify-content-center" style="overflow-wrap: break-word;">4</div>
-              <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 border-top-0 d-flex align-items-center justify-content-center" style="overflow-wrap: break-word;">4</div>
-              <div class="col-list bg-info bg-opacity-10 border border-info border-start-0 border-top-0 d-flex align-items-center justify-content-center" style="overflow-wrap: break-word;">4</div>
-            </div> -->
-        </div>
-    </div>
-    </section>
+    </div>    
     
-    
-    
+    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 </body>
 </html>

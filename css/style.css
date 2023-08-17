@@ -1,9 +1,13 @@
 /*    --------------------------------------------------
 	:: Login Section
 	-------------------------------------------------- */
+.underBG{
+    position: relative;
+    z-index: 1;
+}
 body{
     font-family: 'Raleway', sans-serif;
-/* font-family: 'Ubuntu', sans-serif; */
+    margin: 0;
 }
 #login {
     padding-top: 50px
@@ -48,6 +52,16 @@ body{
     border: 1px solid #ccc;
     vertical-align: middle;
     display: inline-block;
+}
+.flexList .checkbox {
+    width: 1vw;
+    height: 1vw;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    display: inline-block;
+    
 }
 #login .checkbox .label {
     color: #6d6d6d;
