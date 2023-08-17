@@ -129,8 +129,8 @@ async function getUsersInfo(token) {
 			const lastActiveDate = new Date(response[i].lastActiveAt);
 			const regDate = new Date(response[i].registeredAt);
 			
-			const actDate = `${lastActiveDate.getDate()}.0${lastActiveDate.getMonth() + 1}.${lastActiveDate.getFullYear()} ${lastActiveDate.getHours()}:${lastActiveDate.getMinutes()}`;
-			const formattedRegDate = `${regDate.getDate()}.0${regDate.getMonth() + 1}.${regDate.getFullYear()} ${regDate.getHours()}:${regDate.getMinutes()}`;
+			const actDate = `${lastActiveDate.getDate()}.${lastActiveDate.getMonth() + 1}.${lastActiveDate.getFullYear()} ${lastActiveDate.getHours()}:${lastActiveDate.getMinutes()}`;
+			const formattedRegDate = `${regDate.getDate()}.${regDate.getMonth() + 1}.${regDate.getFullYear()} ${regDate.getHours()}:${regDate.getMinutes()}`;
 		
 			mainBody.insertAdjacentHTML("beforeend", UserFormToList(response[i]._id, response[i].username, response[i].email, formattedRegDate, actDate, response[i].roles[0], i));
 		}
