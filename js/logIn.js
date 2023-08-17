@@ -140,8 +140,8 @@ async function getUsersInfo(token) {
     }
 }
 async function sendRequest(url, method, data) {
-	// url = `https://bakerman-node-js-1fd874ff2f21.herokuapp.com/auth${url}`;
-	url = `http://localhost:5000/auth${url}`;
+	url = `https://bakerman-node-js-1fd874ff2f21.herokuapp.com/auth${url}`;
+	// url = `http://localhost:5000/auth${url}`;
 
 	if (method == "POST") {
         // console.log(data);
@@ -170,8 +170,8 @@ async function sendRequest(url, method, data) {
 	}
 }
 async function sendRequestForBearer(url, method, data, token = null) {
-    // url = `https://bakerman-node-js-1fd874ff2f21.herokuapp.com/auth${url}`;
-    url = `http://localhost:5000/auth${url}`;
+    url = `https://bakerman-node-js-1fd874ff2f21.herokuapp.com/auth${url}`;
+    // url = `http://localhost:5000/auth${url}`;
     const headers = {
         Accept: "application/json",
         "Content-Type": "application/json",
