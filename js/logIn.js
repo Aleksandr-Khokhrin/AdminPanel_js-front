@@ -60,7 +60,7 @@ document.getElementById('deleteBtn').onclick = function () {
 	console.log('DELETE') 
 }
 document.getElementById('unblockBtn').onclick = function () {
-	if (userState !== 'UNBLOCK') {
+	if (userState === 'BLOCK') {
 		console.log(userIDActiveCheckBox, userToken)
 		changeStateUSer(userIDActiveCheckBox, userToken)
 		console.log('unblock')
@@ -70,7 +70,7 @@ document.getElementById('unblockBtn').onclick = function () {
 	}
 }
 document.getElementById('blockBtn').onclick = function () {
-	if (userState !== 'BLOCK') {
+	if (userState === 'UNBLOCK') {
 		console.log(userIDActiveCheckBox, userToken)
 		changeStateUSer(userIDActiveCheckBox, userToken)
 		console.log('block')
@@ -221,7 +221,7 @@ async function deletetUser(id, token) {
 	}
 }
 async function sendRequest(url, method, data) {
-	url = `https://reg-and-aut-table-2dec036c3d26.herokuapp.com/auth${url}`;
+	url = `https://alex-nodejs-d873a2e08f3b.herokuapp.com/auth${url}`;
 	// url = `http://localhost:5000/auth${url}`;
 
 	if (method == "POST") {
@@ -251,7 +251,7 @@ async function sendRequest(url, method, data) {
 	}
 }
 async function sendRequestForBearer(url, method, data, token = null) {
-    url = `https://reg-and-aut-table-2dec036c3d26.herokuapp.com/auth${url}`;
+    url = `https://alex-nodejs-d873a2e08f3b.herokuapp.com/auth${url}`;
     // url = `http://localhost:5000/auth${url}`;
     const headers = {
         Accept: "application/json",
@@ -272,7 +272,7 @@ async function sendRequestForBearer(url, method, data, token = null) {
     return response;
 }
 async function sendRequestForDelete(url, method, data, token){
-	url = `https://reg-and-aut-table-2dec036c3d26.herokuapp.com/auth${url}/${data}`;
+	url = `https://alex-nodejs-d873a2e08f3b.herokuapp.com/auth${url}/${data}`;
 	// url = `http://localhost:5000/auth${url}/${data}`;
     const headers = {
         Accept: "application/json",
