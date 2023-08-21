@@ -221,7 +221,7 @@ async function deletetUser(id, token) {
 	}
 }
 async function sendRequest(url, method, data) {
-	url = `https://reg-and-aut-table-2dec036c3d26.herokuapp.com//auth${url}`;
+	url = `https://reg-and-aut-table-2dec036c3d26.herokuapp.com/auth${url}`;
 	// url = `http://localhost:5000/auth${url}`;
 
 	if (method == "POST") {
