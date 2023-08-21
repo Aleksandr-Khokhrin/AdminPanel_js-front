@@ -103,12 +103,18 @@ body{
 }
 .col-list{
     font-size: calc(1vw + 6px);
+    font-weight: 900;
     width: 180px;
-    min-height: 80px;
+    min-height: 40px;
     overflow-wrap: break-word;
     overflow: hidden;
     white-space: normal;
     padding: calc(0.65vw - 2.4px);
+    
+}
+.mainBoxBody .col-list{
+    font-size: calc(1vw + 4px);
+    font-weight: 500;
 }
 .headRight button{
     font-size: calc(1vw + 6px);
